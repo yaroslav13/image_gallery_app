@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:imagegallerytest/bloc/post_bloc.dart';
 import 'package:imagegallerytest/models/post_model.dart';
 import 'package:imagegallerytest/resources/app_colors.dart';
+import 'package:imagegallerytest/ui/loader_indicator.dart';
 import 'package:imagegallerytest/ui/post_tile.dart';
 
 class PostsPage extends StatefulWidget {
@@ -42,7 +43,7 @@ class _ImageListPageState extends State<PostsPage> {
                   });
             } else {
               return Center(
-                child: CircularProgressIndicator(),
+                child: LoadingIndicator(),
               );
             }
           },
